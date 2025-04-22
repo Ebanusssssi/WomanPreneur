@@ -1,4 +1,4 @@
-import { BRAND_LOGOS, HERO_CONTENT } from "../constants"
+import { HERO_CONTENT } from "../constants"
 import heroImage from "../assets/mainImage.png"
 import frameImg from "../assets/frame.png"
 import presentation from "../assets/Presentation.mp4"
@@ -132,7 +132,7 @@ const HeroSection = () => {
                     <a href="https://buy.stripe.com/28o8xF5276Nd35K7ss" target="_blank">
                         <img 
                             src={heroImage} 
-                            alt="Streamer SaaS Interface" 
+                            alt="WomanPreneur Mindset for Success" 
                             className="w-full h-auto object-cover object-center group-hover:scale-110 transition-all duration-300 ease-in-out"/>
                     </a>
                 </motion.div>
