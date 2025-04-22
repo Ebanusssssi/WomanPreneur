@@ -5,7 +5,7 @@ import presentation from "../assets/Presentation.mp4"
 import { motion } from "framer-motion"
 import { AnimatePresence } from "framer-motion";
 import { useContext, useRef } from "react"
-import { PageContext } from "../context/pageContext"
+import { PageContext } from "../context/PageContext"
 
 const containerVariants = {
     hidden: { opacity: 0 },

@@ -1,7 +1,7 @@
 import { useContext, useState } from "react"
 import logo from "../assets/logo.png"
 import { RiCloseFill, RiMenu3Line } from "@remixicon/react";
-import { PageContext } from "../context/pageContext";
+import { PageContext } from "../context/PageContext";
 
 
 const Navbar = () => {
