@@ -4,7 +4,7 @@ import frameImg from "../assets/frame.png"
 import presentation from "../assets/Presentation.mp4"
 import { motion } from "framer-motion"
 import { AnimatePresence } from "framer-motion";
-import { useContext, useRef } from "react"
+import { useContext, useRef, useState } from "react"
 import { PageContext } from "../context/PageContext"
 
 const containerVariants = {
@@ -27,6 +27,7 @@ const HeroSection = () => {
 
     const videoRef = useRef();
     const { showDemo, setShowDemo } = useContext(PageContext);
+    const [isVideoLoading, setIsVideoLoading] = useState(true); // State to track video loading
 
     return (
         <motion.section
@@ -68,10 +69,8 @@ const HeroSection = () => {
                     <button
                         onClick={() => {
                             setShowDemo(!showDemo); 
-                            if (videoRef.current) {
-                            videoRef.current.play();
-                        }}}
-
+                            setIsVideoLoading(true); // Show spinner when video is loading}}
+                        }}
                         className="inline-block border border-gray-500 hover:border-gray-400
                         text-white py-3 px-5 rounded-lg font-medium transition"
                     >
@@ -99,6 +98,12 @@ const HeroSection = () => {
                                 transition={{ duration: 0.3 }}
                                 className="relative h-[40vw] w-auto flex items-center justify-center overflow-hidden scale-y-[85%]"
                             >
+                                {/* Spinner while loading */}
+                                {isVideoLoading && (
+                                    <div className="absolute inset-0 flex items-center justify-center bg-black/80 z-10">
+                                        <div className="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+                                    </div>
+                                )}
                                 <div className="overflow-hidden relative z-10 h-full">
                                     <img src={frameImg} alt="frame" className="h-full" />
                                 </div>
@@ -110,7 +115,8 @@ const HeroSection = () => {
                                         autoPlay
                                         loop
                                         ref={videoRef}
-                                        className="pointer-events-none"
+                                        onLoadedData={() => setIsVideoLoading(false)} // Hide spinner when video is loaded
+                                        className={`pointer-events-none ${isVideoLoading ? "hidden" : "block"}`}
                                     >
                                         <source src={presentation} type="video/mp4" />
                                     </video>
