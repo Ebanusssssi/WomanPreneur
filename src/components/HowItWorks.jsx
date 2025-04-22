@@ -22,13 +22,13 @@ const HowItWorks = () => {
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, ease: "easeOut"}}
-                    className="text-center mb-12 border-t border-neutral-800">
-                    <h2 className="text-3xl lg:text-5xl mt-20 tracking-tighter
-                    bg-gradient-to-t from-neutral-700 via-neutral-300 to-neutral-50
+                    className="font-abril text-center mb-12 border-t border-neutral-800">
+                    <h2 className="text-3xl lg:text-5xl mt-12 lg:mt-20
+                    bg-gradient-to-b from-neutral-700 via-customWhiteHover to-customWhite
                     bg-clip-text text-transparent">
                         {HOW_IT_WORKS_CONTENT.sectionTitle}
                     </h2>
-                    <p className="mt-4 text-neutral-400 max-w-xl mx-auto">
+                    <p className="font-sans mt-4 text-customWhite/60 max-w-xl mx-auto">
                         {HOW_IT_WORKS_CONTENT.sectionDescription}
                     </p>
                 </motion.div>
@@ -41,7 +41,7 @@ const HowItWorks = () => {
                             transition: {
                                 staggerChildren: 0.2,
                             }
-                        }
+                        } 
                     }}
                     /* #2 CUBIC HARD LAYOUT */
                     // className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-4 lg:gap-6">
@@ -56,10 +56,10 @@ const HowItWorks = () => {
                             className="bg-neutral-900 p-6 rounded-xl shadow-lg 
                             flex flex-col justify-between break-inside-avoid mb-4 md:mb-4 lg:mb-6">
                             <div>
-                                <h3 className="text-xl font-semibold mb-4">
+                                <h3 className="text-customWhite text-xl font-semibold mb-4">
                                     {step.title}
                                 </h3>
-                                <p className="text-neutral-400 mb-4">
+                                <p className="text-customWhite/60 mb-4">
                                     {step.description}
                                 </p>
                             </div>
@@ -71,7 +71,7 @@ const HowItWorks = () => {
                                 />
                             </div>
 
-                            {step.users && (
+                            {/* {step.users && (
                                 <div className="flex justify-between mt-4">
                                     <div className="flex -space-x-2">
                                         {step.users.map((user, userIndex) => (
@@ -89,7 +89,7 @@ const HowItWorks = () => {
                                         Connect
                                     </button>
                                 </div>
-                            )}
+                            )} */}
                         </motion.div>
 
                     ))}

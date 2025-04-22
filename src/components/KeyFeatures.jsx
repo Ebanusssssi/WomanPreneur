@@ -24,15 +24,15 @@ const KeyFeatures = () => {
         }
     }
     return (
-        <section className="">
-            <div className="max-w-7xl mx-auto px-4 mt-20">
-                <div className="text-center mb-12 border-t border-neutral-800">
-                    <h2 className="text-3xl lg:text-5xl mt-20 tracking-tighter
-                    bg-gradient-to-t from-neutral-50 via-neutral-300 to-neutral-600
-                    bg-clip-text text-transparent">
+        <section id="features" className="">
+            <div className="max-w-7xl mx-auto px-4 mt-12 lg:mt-20">
+                <div className="font-abril text-center mb-12 border-t border-neutral-800">
+                    <h2 className="text-3xl lg:text-5xl mt-12 lg:mt-20
+                    bg-gradient-to-t from-customWhite via-customWhiteHover to-neutral-600
+                    bg-clip-text text-transparent pb-[5px] lg:pb-[6px]">
                         {KEY_FEATURES_CONTENT.sectionTitle}
                     </h2>
-                    <p className="mt-4">
+                    <p className="font-sans mt-4 text-customWhite/60">
                         {KEY_FEATURES_CONTENT.sectionDescription}
                     </p>
                 </div>
@@ -51,13 +51,13 @@ const KeyFeatures = () => {
                             text-center w-full md:w-1/2 lg:w-1/3 p-6"
                             >
 
-                            <div className="flex justify-center items-center mb-4">
+                            <div className="text-customWhite flex justify-center items-center mb-4">
                                 {feature.icon}
                             </div>
-                            <h3 className="text-xl">
+                            <h3 className="text-customWhite text-xl">
                                 {feature.title}
                             </h3>
-                            <p className="mt-2 text-neutral-400">
+                            <p className="mt-2 text-customWhite/60">
                                 {feature.description}
                             </p>
                         </motion.div>

@@ -5,7 +5,16 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        customWhite: '#F4E4E1',
+        customWhiteHover: '#FEEEEB',
+        customBlack: '#222',
+      },
+      fontFamily: {
+        abril: ['Abril Fatface', 'serif'],
+      },
+    },
   },
   plugins: [],
 }

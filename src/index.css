@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -11,10 +13,8 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  /* background-color: rgb(29, 29, 29); */
-  /* background-color: rgb(0, 119, 255); */
   background: rgb(2,0,36);
-  background: linear-gradient(0deg, rgba(2,0,36,0) 30%, rgba(0,119,255,1) 43%, rgba(0,119,255,1) 49%, rgba(0,212,255,0) 63%);
+  background: linear-gradient(0deg, rgba(2,0,36,0) 30%, rgba(244,228,225,1) 43%, rgba(244,228,225,1) 49%, rgba(0,212,255,0) 63%);
   border-radius: 999px 999px 999px 999px;
 }
 
