@@ -1,6 +1,7 @@
 import heroImage from "../assets/mainImage.png"
 import { motion } from "framer-motion"
 import Footer from "../components/Footer"
+import { Link } from "react-router-dom"
 
 const containerVariants = {
     hidden: { opacity: 0 },
@@ -65,13 +66,13 @@ const Download = () => {
                 <motion.div 
                     variants={fadeIn}
                     className="mt-12 w-full rounded-3xl border border-neutral-800 overflow-hidden group transition-all duration-300 ease-in-out">
-                    <a href="#">
+                    <div>
                         <img 
                             src={heroImage} 
                             alt="Streamer SaaS Interface" 
                             className="w-full h-auto object-cover object-center group-hover:scale-110 transition-all duration-300 ease-in-out"
                         />
-                    </a>
+                    </div>
                 </motion.div>
             </div>
             <Footer />
