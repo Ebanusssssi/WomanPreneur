@@ -1,4 +1,3 @@
-import { HERO_CONTENT } from "../constants"
 import heroImage from "../assets/mainImage.png"
 import { motion } from "framer-motion"
 import Footer from "../components/Footer"
@@ -45,7 +44,7 @@ const Download = () => {
                 variants={fadeInUp}
                 className="mt-6 space-x-4">
                     <a 
-                        href="/files/WomanPreneur - Mindset for Success.pdf" 
+                        href="/files/WomanPreneur - Mindset for Success.zip" 
                         download
                         className="inline-block bg-customWhite hover:bg-customWhiteHover shadow-lg shadow-transparent hover:shadow-customWhiteHover/50
                         text-customBlack py-4 px-11 rounded-lg font-medium transition animate-bounce"
@@ -70,7 +69,8 @@ const Download = () => {
                         <img 
                             src={heroImage} 
                             alt="Streamer SaaS Interface" 
-                            className="w-full h-auto object-cover object-center group-hover:scale-110 transition-all duration-300 ease-in-out"/>
+                            className="w-full h-auto object-cover object-center group-hover:scale-110 transition-all duration-300 ease-in-out"
+                        />
                     </a>
                 </motion.div>
             </div>
