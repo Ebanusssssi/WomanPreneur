@@ -88,7 +88,7 @@ const HeroSection = () => {
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             transition={{ duration: 0.3 }}
-                            className="fixed inset-0 h-screen w-screen bg-black/80 z-50 flex items-center justify-center"
+                            className="fixed inset-0 h-screen w-screen bg-black/80 z-50 flex items-center justify-center backdrop-blur-sm"
                         >
                             <motion.div
                                 onClick={(e) => e.stopPropagation()}
@@ -96,18 +96,18 @@ const HeroSection = () => {
                                 animate={{ scaleX: 1.2, scaleY: 1.05, opacity: 1 }}
                                 exit={{ scale: 0.8, opacity: 0 }}
                                 transition={{ duration: 0.3 }}
-                                className="relative h-[40vw] w-auto flex items-center justify-center overflow-hidden scale-y-[85%]"
+                                className="relative h-[120vw] lg:h-[40vw] w-auto flex items-center justify-center overflow-hidden scale-y-[85%]"
                             >
                                 {/* Spinner while loading */}
                                 {isVideoLoading && (
                                     <div className="absolute inset-0 flex items-center justify-center bg-black/80 z-10">
-                                        <div className="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+                                        <div className="w-8 h-8 border-4 border-customWhite/50 border-t-transparent rounded-full animate-spin"></div>
                                     </div>
                                 )}
                                 <div className="overflow-hidden relative z-10 h-full">
                                     <img src={frameImg} alt="frame" className="h-full" />
                                 </div>
-                                <div className="absolute w-full scale-x-[91%] scale-y-110 rounded-[1vw] overflow-hidden">
+                                <div className="absolute w-full scale-x-[91%] scale-y-110 rounded-[5vw] lg:rounded-[1vw] overflow-hidden">
                                     <video
                                         playsInline
                                         preload="none"
