@@ -99,7 +99,7 @@ const HeroSection = () => {
                             >
                                 {/* Spinner while loading */}
                                 {isVideoLoading && (
-                                    <div className="absolute inset-0 flex items-center justify-center bg-black/80 z-10 rounded-[5vw] lg:rounded-[1vw]">
+                                    <div className="absolute inset-0 flex items-center justify-center bg-black/0 z-10 rounded-[5vw] lg:rounded-[1vw]">
                                         <div className="w-8 h-8 border-4 border-customWhite/50 border-t-transparent rounded-full animate-spin"></div>
                                     </div>
                                 )}
