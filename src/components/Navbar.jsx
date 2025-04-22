@@ -6,7 +6,7 @@ import { PageContext } from "../context/PageContext";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const { showDemo, setShowDemo } = useContext(PageContext);
+    const { showDemo, setShowDemo, setIsVideoLoading } = useContext(PageContext);
     
 
     const toggleMenu = () => {
@@ -34,7 +34,10 @@ const Navbar = () => {
                 {/* Right: Buttons (hidden on mobile) */}
                 <div className="hidden md:flex space-x-4 items-center">
                     <button
-                        onClick={() => setShowDemo(!showDemo)}
+                        onClick={() => {
+                            setShowDemo(!showDemo);
+                            setIsVideoLoading(true); // Show spinner when video is loading
+                        }}
                         className="border border-neutral-700 text-white py-2 px-4 rounded-lg hover:bg-neutral-700 transition-colors"
                     >
                         Get Demo
@@ -59,25 +62,43 @@ const Navbar = () => {
                 <div className="md:hidden bg-neutral-900/60 backdrop-blur-md 
                 border border-neutral-800 p-4 rounded-xl mt-2">
                     <div className="flex flex-col space-y-4 ">
-                        <a href="#works" className="hover:text-neutral-200 transition">
+                        <a 
+                            href="#works" 
+                            className="hover:text-neutral-200 transition"
+                            onClick={() => setIsOpen(false)} // Close menu after clicking
+                        >
                             Book contents
                         </a>
-                        <a href="#features" className="hover:text-neutral-200 transition">
+                        <a 
+                            href="#features" 
+                            className="hover:text-neutral-200 transition"
+                            onClick={() => setIsOpen(false)} // Close menu after clicking
+                        >
                             Key features
                         </a>
-                        <a href="#testimonials" className="hover:text-neutral-200 transition">
+                        <a 
+                            href="#testimonials" 
+                            className="hover:text-neutral-200 transition"
+                            onClick={() => setIsOpen(false)} // Close menu after clicking 
+                        >
                             Testimonials
                         </a>
                         <button
                             onClick={() => {
                                 setShowDemo(!showDemo);
                                 setIsOpen(false);
+                                setIsVideoLoading(true); // Show spinner when video is loading
                             }}
                             className="border border-neutral-700 text-white py-2 px-4 rounded-lg hover:bg-neutral-700 transition-colors"
                         >
                             Get Demo
                         </button>
-                        <a href="https://buy.stripe.com/28o8xF5276Nd35K7ss" target="_blank" className="text-center bg-customWhite text-customBlack font-semibold py-2 px-4 rounded-lg hover:bg-customWhiteHover transition-colors">
+                        <a 
+                            href="https://buy.stripe.com/28o8xF5276Nd35K7ss" 
+                            target="_blank" 
+                            className="text-center bg-customWhite text-customBlack font-semibold py-2 px-4 rounded-lg hover:bg-customWhiteHover transition-colors"
+                            onClick={() => setIsOpen(false)} // Close menu after clicking
+                        >
                             Buy the book
                         </a>
                     </div>

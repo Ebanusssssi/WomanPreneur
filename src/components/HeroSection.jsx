@@ -4,7 +4,7 @@ import frameImg from "../assets/frame.png"
 import presentation from "../assets/Presentation.mp4"
 import { motion } from "framer-motion"
 import { AnimatePresence } from "framer-motion";
-import { useContext, useRef, useState } from "react"
+import { useContext, useRef } from "react"
 import { PageContext } from "../context/PageContext"
 
 const containerVariants = {
@@ -26,8 +26,7 @@ const fadeIn = {
 const HeroSection = () => {
 
     const videoRef = useRef();
-    const { showDemo, setShowDemo } = useContext(PageContext);
-    const [isVideoLoading, setIsVideoLoading] = useState(true); // State to track video loading
+    const { showDemo, setShowDemo, isVideoLoading, setIsVideoLoading } = useContext(PageContext);
 
     return (
         <motion.section

@@ -5,10 +5,16 @@ export const PageContext = createContext();
 const PageContextProvider = ({ children }) => {
 
     const [showDemo, setShowDemo] = useState(false);
+    const [isVideoLoading, setIsVideoLoading] = useState(true); // State to track video loading
+
 
     const value = {
         showDemo,
-        setShowDemo
+        setShowDemo,
+
+        isVideoLoading,
+        setIsVideoLoading,
+
     }
 
     return (
