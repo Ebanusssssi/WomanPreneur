@@ -44,7 +44,7 @@ const Download = () => {
                 variants={fadeInUp}
                 className="mt-6 space-x-4">
                     <a 
-                        href="/files/WomanPreneur - Mindset for Success.zip" 
+                        href="/files/WomanPreneur_Mindset_for_Success.zip"
                         download
                         className="inline-block bg-customWhite hover:bg-customWhiteHover shadow-lg shadow-transparent hover:shadow-customWhiteHover/50
                         text-customBlack py-4 px-11 rounded-lg font-medium transition animate-bounce"
