@@ -48,7 +48,7 @@ export const HERO_CONTENT = {
     "Shift your mindset, define your path, and build the life and business you truly want—with clarity, purpose, and confidence. Created for women ready to rise.",
   callToAction: {
     primary: "Buy the book",
-    secondary: "Request Demo",
+    secondary: "Take a look",
   },
   trustedByText: "Trusted by Leading Streaming Brands & Creators",
 };

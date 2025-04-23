@@ -30,6 +30,7 @@ const HeroSection = () => {
 
     return (
         <motion.section
+        id="hero"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -61,7 +62,7 @@ const HeroSection = () => {
                 <motion.div 
                 variants={fadeInUp}
                 className="mt-6 space-x-4">
-                    <a href="https://buy.stripe.com/28o8xF5276Nd35K7ss" target="_blank" className="inline-block bg-customWhite hover:bg-customWhiteHover shadow-lg shadow-transparent hover:shadow-customWhiteHover/50
+                    <a href="https://buy.stripe.com/28o8xF5276Nd35K7ss" target="_blank" rel="noopener noreferrer" className="inline-block bg-customWhite hover:bg-customWhiteHover shadow-lg shadow-transparent hover:shadow-customWhiteHover/50
                     text-customBlack py-3 px-5 rounded-lg font-medium transition">
                         {HERO_CONTENT.callToAction.primary}
                     </a>
@@ -76,6 +77,12 @@ const HeroSection = () => {
                         {HERO_CONTENT.callToAction.secondary}
                     </button>
                 </motion.div>
+
+                <motion.p 
+                    variants={fadeInUp}
+                    className="mt-6 text-customWhite/60 max-w-xl tracking-wide">
+                    PDF-format. Ready to read. Ready to print. Always with you
+                </motion.p>
                 
 
                 {/* video*/}
@@ -129,7 +136,7 @@ const HeroSection = () => {
                 <motion.div 
                     variants={fadeIn}
                     className="mt-12 mb-12 w-full rounded-3xl border border-neutral-800 overflow-hidden group transition-all duration-300 ease-in-out">
-                    <a href="https://buy.stripe.com/28o8xF5276Nd35K7ss" target="_blank">
+                    <a href="https://buy.stripe.com/28o8xF5276Nd35K7ss" target="_blank" rel="noopener noreferrer">
                         <img 
                             src={heroImage} 
                             alt="WomanPreneur Mindset for Success" 

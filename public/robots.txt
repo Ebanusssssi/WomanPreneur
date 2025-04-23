@@ -1,0 +1,4 @@
+Sitemap: https://woman-preneur.vercel.app/sitemap.xml
+
+User-agent: *
+Disallow: 
